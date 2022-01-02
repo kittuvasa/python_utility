@@ -1,0 +1,33 @@
+import os
+
+
+def demand(termm, timee):
+
+    match termm.lower():
+        case 's':
+            if timee == '':
+                print(''' You're given 30 SECONDS  to SAVE and CLOSE all your OnGoing File's 
+                                                    GOOD NIGHT to ME 😴                          ''')
+                os.system("shutdown /s")
+            else:
+                print(f" MACHINE  gonna down within {timee} sec. GoodByeeee 🖐🖐")
+                os.system(f"shutdown /s /t {timee}")
+
+        case 'r':
+            if time == '':
+                print(''' You're given 30 SECONDS  to SAVE and CLOSE all your OnGoing File's 
+                                                           before REBOOTING 😴                          ''')
+                os.system("shutdown /r")
+            else:
+                print(f" MACHINE  gonna REBOOT within {timee} sec. GoodByeeee 🖐🖐")
+                os.system(f"shutdown /r /t {timee}")
+
+        case _:
+            print("SORRY WRONG INPUT")
+            exit()
+
+
+term = input(">How to PUT DOWN your machine SHUTDOWN(s)/RESTART(r) : ")
+time = input(">Any specific timing [Enter in SECONDS😴] / skip[ENTER] : ")
+
+demand(term, time)
