@@ -27,7 +27,11 @@ def demand(termm, timee):
             exit()
 
 
-term = input(">How to PUT DOWN your machine SHUTDOWN(s)/RESTART(r) : ")
-time = input(">Any specific timing [Enter in SECONDS😴] / skip[ENTER] : ")
-
-demand(term, time)
+def main():
+    term = input(">How to PUT DOWN your machine SHUTDOWN(s)/RESTART(r) : ")
+    time = input(">Any specific timing [Enter in SECONDS😴] / skip[ENTER] : ")
+    
+    demand(term, time)
+    
+if __name__ == "__main__":
+    main()
