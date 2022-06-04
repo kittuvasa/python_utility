@@ -6,21 +6,26 @@ def demand(termm, timee):
     match termm.lower():
         case 's':
             if timee == '':
+                os.system("shutdown /s")
                 print(''' You're given 30 SECONDS  to SAVE and CLOSE all your OnGoing File's 
                                                     GOOD NIGHT to ME 😴                          ''')
-                os.system("shutdown /s")
+                
             else:
-                print(f" MACHINE  gonna down within {timee} sec. GoodByeeee 🖐🖐")
                 os.system(f"shutdown /s /t {timee}")
+                print(f" MACHINE  gonna down within {timee} sec. GoodByeeee 🖐🖐")
+                
 
         case 'r':
             if time == '':
+            
+                os.system("shutdown /r")
                 print(''' You're given 30 SECONDS  to SAVE and CLOSE all your OnGoing File's 
                                                            before REBOOTING 😴                          ''')
-                os.system("shutdown /r")
+                
             else:
-                print(f" MACHINE  gonna REBOOT within {timee} sec. GoodByeeee 🖐🖐")
                 os.system(f"shutdown /r /t {timee}")
+                print(f" MACHINE  gonna REBOOT within {timee} sec. GoodByeeee 🖐🖐")
+                
 
         case _:
             print("SORRY WRONG INPUT")
@@ -28,8 +33,8 @@ def demand(termm, timee):
 
 
 def main():
-    term = input(">How to PUT DOWN your machine SHUTDOWN(s)/RESTART(r) : ")
-    time = input(">Any specific timing [Enter in SECONDS😴] / skip[ENTER] : ")
+    term = input(">How to PUT DOWN your machine SHUTDOWN(s)/RESTART(r) : ").strip()
+    time = input(">Any specific timing [Enter in SECONDS😴] / skip[ENTER] : ").strip()
     
     demand(term, time)
     
